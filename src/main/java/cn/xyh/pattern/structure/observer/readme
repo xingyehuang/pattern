@@ -1,0 +1,20 @@
+观察者模式:定义对象一对多的关系，当对象的状态发生改变时，所以依赖它的对象都会被通知
+
+抽象主题角色(Subject)     提供对观察者对象保存，提供一个方法，主题对象发生状态变化时，通知观察者
+具体主题角色(SubjectImpl) 抽象主题角色的具体实现，可以用集合来保存观察者，实现通知方法，状态发生变化时，通知观察者。
+抽象观察者(Observer)     提供抽象方法，主题内容通知后的操作方法
+具体观察者(ObserverImpl)  抽象观察者的实现
+
+java中的观察者模式：
+java.util.EventListener-所有事件监听器接口都必须扩展的标记接口。
+javax.servlet.http.HttpSessionBindingListener-观察者类
+javax.servlet.http.HttpSessionAttributeListener-观察者类
+
+
+观察者模式与发布-订阅模式区别
+https://www.cnblogs.com/viaiu/p/9939301.html
+
+1、观察者模式中，观察者与主题是有交互的。
+发布-订阅模式彼此不需要了解。通过消息队列来交互。
+2、观察者模式主要以同步的方式实现。发布-订阅模式主要是异步方式实现
+3、观察者模式需要单个应用的实现，而发布-订阅模式主要用在服务间
